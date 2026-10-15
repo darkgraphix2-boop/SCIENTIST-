@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LabBench — Explore the unknown</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="nav">
+    <a class="brand" href="#top"><span class="brand-mark">✦</span> LABBENCH</a>
+    <nav><a href="#explore">Explore</a><a href="#principles">Principles</a><a href="#about">About</a></nav>
+    <span class="status"><i></i> SYSTEM ONLINE</span>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">FIELD NOTE 001 / SCIENTIFIC METHOD</p>
+        <h1>Question<br><em>everything.</em></h1>
+        <p class="lede">A small digital lab for curious minds. Frame a hypothesis, tune the variables, and see where the evidence takes you.</p>
+        <a class="button" href="#explore">Start an experiment <span>↗</span></a>
+      </div>
+      <div class="orbit-wrap" aria-label="Animated molecular orbit illustration">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+        <div class="core"><span>Δ</span><small>curiosity<br>is data</small></div>
+        <span class="atom atom-1">01</span><span class="atom atom-2">02</span><span class="atom atom-3">03</span>
+      </div>
+    </section>
+
+    <section class="experiment" id="explore">
+      <div class="section-head"><p class="eyebrow">INTERACTIVE LAB / SIMULATION</p><h2>Build a hypothesis.</h2></div>
+      <div class="lab-grid">
+        <div class="panel controls">
+          <div class="panel-top"><span>EXPERIMENT 07</span><span class="mono">STATUS: READY</span></div>
+          <label>Choose a variable</label>
+          <div class="choices" role="group" aria-label="Choose a variable">
+            <button class="choice active" data-variable="light">Light exposure</button>
+            <button class="choice" data-variable="water">Water volume</button>
+            <button class="choice" data-variable="soil">Soil nutrients</button>
+          </div>
+          <label for="amount">Adjust intensity <output id="amount-value">65%</output></label>
+          <input id="amount" type="range" min="10" max="100" value="65" />
+          <div class="scale"><span>LOW</span><span>HIGH</span></div>
+          <button class="run" id="run">Run simulation <span>→</span></button>
+          <p class="hint">Results are illustrative, not a substitute for a controlled experiment.</p>
+        </div>
+        <div class="panel result" aria-live="polite">
+          <div class="result-label"><span class="pulse"></span> PROJECTED OUTCOME</div>
+          <div class="metric"><strong id="metric">78</strong><span>%</span></div>
+          <p id="result-title">Optimal growth conditions</p>
+          <p class="result-note" id="result-note">At this light level, photosynthetic activity is projected to peak in 4–6 days.</p>
+          <div class="bars"><i style="height:45%"></i><i style="height:58%"></i><i style="height:52%"></i><i style="height:76%"></i><i style="height:68%"></i><i class="bar-hot" style="height:88%"></i><i style="height:79%"></i><i style="height:91%"></i><i style="height:84%"></i><i style="height:96%"></i></div>
+          <div class="bar-labels"><span>DAY 01</span><span>DAY 05</span><span>DAY 10</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="principles" id="principles">
+      <p class="eyebrow">THE LAB NOTEBOOK</p><h2>Good science<br>stays curious.</h2>
+      <div class="principle-list"><article><b>01</b><h3>Observe closely</h3><p>Notice the signal hiding in the noise. Every breakthrough starts with paying attention.</p></article><article><b>02</b><h3>Change one thing</h3><p>Isolate the variable. A clear experiment makes a clear story.</p></article><article><b>03</b><h3>Share the result</h3><p>Knowledge compounds when it moves. Document what happened, including the surprises.</p></article></div>
+    </section>
+  </main>
+  <footer id="about"><span>LABBENCH / AN OPEN EXPERIMENT</span><span>MADE FOR THE CURIOUS · 2026</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
