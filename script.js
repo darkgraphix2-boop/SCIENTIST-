@@ -1,0 +1,6 @@
+const data={light:{metric:78,title:'Optimal growth conditions',note:'At this light level, photosynthetic activity is projected to peak in 4–6 days.'},water:{metric:64,title:'Balanced hydration window',note:'Consistent water volume reduces stress markers while preserving root oxygenation.'},soil:{metric:86,title:'Nutrient-rich baseline',note:'The current nutrient profile suggests strong early growth with healthy leaf density.'}};
+let variable='light';const amount=document.querySelector('#amount');const value=document.querySelector('#amount-value');
+document.querySelectorAll('.choice').forEach(btn=>btn.addEventListener('click',()=>{document.querySelector('.choice.active').classList.remove('active');btn.classList.add('active');variable=btn.dataset.variable;update()}));
+amount.addEventListener('input',update);document.querySelector('#run').addEventListener('click',()=>{const run=document.querySelector('#run');run.innerHTML='Simulating <span>…</span>';setTimeout(()=>{run.innerHTML='Run simulation <span>→</span>';update()},550)});
+function update(){const d=data[variable], intensity=Number(amount.value);value.textContent=intensity+'%';document.querySelector('#metric').textContent=Math.round(d.metric+(intensity-65)*.18);document.querySelector('#result-title').textContent=d.title;document.querySelector('#result-note').textContent=d.note}
+
